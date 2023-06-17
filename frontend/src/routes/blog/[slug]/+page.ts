@@ -5,7 +5,6 @@ import { getPost } from '$lib/utils/sanity';
 export const ssr = false;
 
 export const load = (async ({ params }) => {
-	console.log(params);
 	const post = await getPost(params.slug);
 	if (post) return post;
 
