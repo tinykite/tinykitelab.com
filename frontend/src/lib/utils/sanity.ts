@@ -21,6 +21,12 @@ export async function getCaseStudies(): Promise<CaseStudy[]> {
 	);
 }
 
+export async function getCaseStudy(slug: string): Promise<Post> {
+	return await client.fetch(groq`*[_type == "caseStudy" && slug.current == $slug][0]`, {
+		slug
+	});
+}
+
 export async function getPosts(): Promise<Post[]> {
 	return await client.fetch(
 		groq`*[_type == "post" && defined(slug.current)] | order(_createdAt desc)[0...5]`

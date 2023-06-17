@@ -7,7 +7,7 @@
 	export let data: PageData;
 </script>
 
-<section class="post">
+<article class="post">
 	{#if data.mainImage}
 		<img
 			class="post__cover"
@@ -26,4 +26,4 @@
 			<PortableText value={data.body} />
 		</div>
 	</div>
-</section>
+</article>
