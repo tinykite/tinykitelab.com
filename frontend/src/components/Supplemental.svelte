@@ -2,8 +2,6 @@
 	import type { Post } from '$lib/utils/sanity'
 	export let posts: Post[]
 
-	console.log(posts)
-
 	const speakingEngagements = [
 		{
 			title: "Mpls Jr Devs: Animation with Framer Motion",
