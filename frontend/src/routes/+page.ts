@@ -1,9 +1,9 @@
-import { getCaseStudies, getPosts } from '$lib/utils/sanity';
+import { getCaseStudies, getLimitedPosts } from '$lib/utils/sanity';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 export const load = (async () => {
-	const posts = await getPosts();
+	const posts = await getLimitedPosts();
 	const caseStudies = await getCaseStudies();
 
 	if (!posts) {

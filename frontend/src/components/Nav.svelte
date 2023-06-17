@@ -3,7 +3,7 @@
   import { page } from '$app/stores';
   import classNames from 'classnames'
 
-  let currentSlug = $page.route.id
+  let currentSlug = $page.route.id ?? '/'
 
  </script>
 
