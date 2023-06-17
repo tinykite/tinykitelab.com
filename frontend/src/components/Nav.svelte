@@ -1,15 +1,22 @@
 <script lang="ts">
 	import { navItems } from '$lib/consts'
-</script>
+  import { page } from '$app/stores';
+  import classNames from 'classnames'
+
+  let currentSlug = $page.route.id
+
+ </script>
 
 <header class="site-header">
 	<nav class="site-nav">
 		<a href="/" aria-label="Tiny Kite Lab" class="site-nav__logo"><img class="site-nav__logo" src="/images/logo-large.png" alt="Tiny Kite Logo"></a>
-		<ul class="site-nav__nav-list">
+		<ul class="site-nav__nav-list"> 
 			{#each navItems as navItem }
 			<li class="site-nav__nav-item">
 				<a
-					class="site-nav__nav-link"
+        
+					class={classNames('site-nav__nav-link', { 'site-nav__nav-link--current': currentSlug === navItem.url })}
+          aria-current={ currentSlug === navItem.url && "page"}
 					href="{ navItem.url }">
 					{ navItem.text }</a
 				>
