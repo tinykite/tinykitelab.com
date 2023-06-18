@@ -5,7 +5,7 @@ export const navItems = [
 	},
 	{
 		text: 'Blog',
-		url: '/blog/'
+		url: '/blog'
 	}
 ];
 
