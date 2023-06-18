@@ -4,9 +4,11 @@
 	export let data: PageData;
 </script>
 
-<article class="article">
-  <h1 class="article__title article__title--emphasis">{ data.title }</h1>
+<main class="wrapper">
+	<article class="article">
+	  <h1 class="article__title article__title--emphasis">{ data.title }</h1>
 
-	<PortableText value={data.body} />
-  <a href="/" class="article__button">Return</a>
-</article>
+		<PortableText value={data.body} />
+	  <a href="/" class="article__button">Return</a>
+	</article>
+</main>
