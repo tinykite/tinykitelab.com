@@ -1,12 +1,10 @@
 <script lang="ts">
-	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
 	import type { PageData } from './$types';
 	import classNames from 'classnames';
 	export let data: PageData
-
-	const  { posts } = data
+	const {posts} = data
 
 </script>
 
@@ -14,11 +12,13 @@
 <ul class="articleList">
 	{#each posts as post, i} 
 	<li class="articleList__item">
-			<time datetime={formatDate(post._createdAt)}>{ formatDate(post._createdAt) }</time>
+			<time datetime={formatDate(post.publishedAt)}>{ formatDate(post.publishedAt) }</time>
 			<a class={classNames("articleList__link", {"articleList__link--emphasis": i === 0})} href={`/blog/${post.slug.current}`}>
 				{post.title}
 			</a>
+			{#if post.description}
 			<p>{ post.description }</p>
+			{/if}
 	</li>
 	{/each}
 </ul>

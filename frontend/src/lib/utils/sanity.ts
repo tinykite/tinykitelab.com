@@ -28,14 +28,17 @@ export async function getCaseStudy(slug: string): Promise<Post> {
 }
 
 export async function getPosts(): Promise<Post[]> {
-	return await client.fetch(
-		groq`*[_type == "post" && defined(slug.current)] | order(_createdAt desc)`
-	);
+	return await client.fetch(groq`*[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+		title, 
+		description, 
+		publishedAt, 
+		slug
+	}`);
 }
 
 export async function getLimitedPosts(): Promise<Post[]> {
 	return await client.fetch(
-		groq`*[_type == "post" && defined(slug.current)] | order(_createdAt desc)[0...5]`
+		groq`*[_type == "post" && defined(slug.current)] | order(publishedAt desc)[0...5]`
 	);
 }
 
