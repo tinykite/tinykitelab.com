@@ -6,8 +6,8 @@
 	/>
 	<div>
 		<h1 class="hero__title">Hi, I'm Dakota</h1>
-		<p class="hero__eyebrow">A front-end engineer and interdisciplinary artist who cares about design, data visualization, and storytelling.</p>
-		<p>For the last several years I've built intuitive web applications and advocated for the value of centering inclusive design. In my free time, I also love to draw minimalist illustrations of the outdoors and build interactive, participatory websites.</p>
+		<p class="hero__eyebrow">I'm a developer and designer who thrives at the intersection of storytelling, data, and creative technology.</p>
+		<p>I love building interactive tools, design systems, and data visualizations — and advocating for those products to center accessibility and inclusive design principles.</p>
 		<p>Before focusing on all that, I went to school for creative writing — and honed my skills as a journalist and essayist for magazines that include <em>Yoga International</em>, <em>Paper Darts</em>, <em>American Craft</em>, and <em>Monkeybicycle</em> plus the anthology <em>The Way We Sleep</em>.</p>
 	</div>
 </div>
