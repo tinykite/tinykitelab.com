@@ -26,10 +26,17 @@
 
 	<style>
 		.articleList {
+			display: block;
     	list-style: none;
     	padding: 0;
 			margin: 0 auto;
 
+		}
+
+		.articleList__item {
+			display: block;
+			max-width: 60%;
+			margin: 0 auto;
 		}
 
 		.articleList__item:first-of-type {
@@ -41,12 +48,12 @@
   		padding-top: 2rem;
   		border-top: 1px solid #ccc;
 		}
-
+/* 
 		@media (min-width: 43.75rem) {
-			.articleList {
+			.articleList__item {
 				width: 70ch;
 			}
-		}
+		} */
 
 		.articleList__link {
 			display: block;
