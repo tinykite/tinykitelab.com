@@ -13,6 +13,7 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	background: yellow;
 }
 img,
 picture,
@@ -49,6 +50,21 @@ h6 {
 	--c-tertiaryText: #dadada;
 	--c-inverseText: #ffffff;
 	--c-primaryAccent: #ffc6ab;
+	--c-lightAccent: (rgba(255, 198, 171, 0.75));
+}
+
+/* TODO: Finalize dark color scheme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--c-background: #222;
+		--c-inverseBackground: rgb(255, 255, 255);
+		--c-primaryText: rgb(255, 255, 255);
+		--c-secondaryText: rgb(255, 255, 255);
+		--c-tertiaryText: rgb(255, 255, 255);
+		--c-inverseText: #222;
+		--c-primaryAccent: #ffc6ab;
+		--c-lightAccent: (rgba(255, 198, 171, 0.75));
+	}
 }
 
 .wrapper {
@@ -97,7 +113,7 @@ a:active {
 }
 
 a:hover {
-	background-color: rgba(255, 198, 171, 0.75);
+	background-color: var(--c-lightAccent);
 }
 
 p,
