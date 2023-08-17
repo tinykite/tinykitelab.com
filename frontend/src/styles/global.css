@@ -43,6 +43,11 @@ h6 {
 }
 
 :root {
+	--c-blue: rgb(0, 0, 255);
+	--c-white: rgb(231, 231, 241);
+	--c-offWhite: rgb(176, 176, 188);
+	--c-black: #161619;
+
 	--c-background: #ffffff;
 	--c-inverseBackground: #272822;
 	--c-primaryText: #272822;
@@ -56,13 +61,13 @@ h6 {
 /* TODO: Finalize dark color scheme */
 @media (prefers-color-scheme: dark) {
 	:root {
-		--c-background: #222;
-		--c-inverseBackground: rgb(255, 255, 255);
-		--c-primaryText: rgb(255, 255, 255);
-		--c-secondaryText: rgb(255, 255, 255);
-		--c-tertiaryText: rgb(255, 255, 255);
-		--c-inverseText: #222;
-		--c-primaryAccent: #ffc6ab;
+		--c-background: var(--c-black);
+		--c-inverseBackground: var(--c-white);
+		--c-primaryText: var(--c-white);
+		--c-secondaryText: var(--c-offWhite);
+		--c-tertiaryText: var(--c-white);
+		--c-inverseText: var(--c-black);
+		--c-primaryAccent: var(--c-blue);
 		--c-lightAccent: (rgba(255, 198, 171, 0.75));
 	}
 }
@@ -146,6 +151,7 @@ code {
 
 h1 {
 	font-size: 2.5rem;
+	color: var(--c-white);
 }
 
 h2 {
