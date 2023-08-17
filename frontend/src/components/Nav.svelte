@@ -3,8 +3,6 @@
   import { page } from '$app/stores';
   import classNames from 'classnames'
 
-  let currentSlug = $page.url.pathname
-
  </script>
 
 <header class="site-header">
@@ -20,8 +18,8 @@
 			<li class="site-nav__nav-item">
 				<a
         
-					class={classNames('site-nav__nav-link', { 'site-nav__nav-link--current': currentSlug === navItem.url })}
-          aria-current={ currentSlug === navItem.url && "page"}
+					class={classNames('site-nav__nav-link', { 'site-nav__nav-link--current': $page.url.pathname === navItem.url })}
+          aria-current={ $page.url.pathname === navItem.url && "page"}
 					href="{ navItem.url }">
 					{ navItem.text }</a
 				>
