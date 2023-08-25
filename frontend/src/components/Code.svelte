@@ -14,3 +14,10 @@
 		{@html Prism.highlight(portableText?.value?.code, Prism.languages['javascript'])}
 	</code>
 </pre>
+
+<style>
+	pre:has(code) {
+  	tab-size: 1;
+  	overflow-x: scroll;
+	}
+</style>
