@@ -6,6 +6,8 @@
 	export let data: PageData
 	const {posts} = data
 
+	$$restProps
+
 </script>
 
 <main class="wrapper">
@@ -30,7 +32,6 @@
     	list-style: none;
     	padding: 0;
 			margin: 0 auto;
-
 		}
 
 		.articleList__item {
@@ -48,12 +49,12 @@
   		padding-top: 2rem;
   		border-top: 1px solid #ccc;
 		}
-/* 
+
 		@media (min-width: 43.75rem) {
 			.articleList__item {
 				width: 70ch;
 			}
-		} */
+		}
 
 		.articleList__link {
 			display: block;

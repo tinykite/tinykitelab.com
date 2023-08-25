@@ -45,20 +45,68 @@ h6 {
 :root {
 	--c-blue: rgb(0, 0, 255);
 	--c-white: rgb(231, 231, 241);
+	--c-brightWhite: #fefefe;
+	--c-brightestWhite: #ffffff;
 	--c-offWhite: rgb(176, 176, 188);
 	--c-black: #161619;
-
-	--c-background: #ffffff;
-	--c-inverseBackground: #272822;
-	--c-primaryText: #272822;
-	--c-secondaryText: #444444;
-	--c-tertiaryText: #dadada;
-	--c-inverseText: #ffffff;
-	--c-primaryAccent: #ffc6ab;
-	--c-lightAccent: (rgba(255, 198, 171, 0.75));
+	--c-brown: #aa5d00;
+	--c-lightBrown: #b8860b;
+	--c-green: #008000;
+	--c-cerulean: #007299;
+	--c-red: #d91e18;
+	--c-lightestGray: #dadada;
+	--c-lightGray: #696969;
+	--c-darkGray: #545454;
+	--c-darkerGray: #444444;
+	--c-darkestGray: #272822;
 }
 
-/* TODO: Finalize dark color scheme */
+@media (prefers-color-scheme: light) {
+	:root {
+		--c-blue: rgb(0, 0, 255);
+		--c-white: rgb(231, 231, 241);
+		--c-brightWhite: #fefefe;
+		--c-brightestWhite: #ffffff;
+		--c-offWhite: rgb(176, 176, 188);
+		--c-black: #161619;
+		--c-brown: #aa5d00;
+		--c-lightBrown: #b8860b;
+		--c-green: #008000;
+		--c-cerulean: #007299;
+		--c-red: #d91e18;
+		--c-lightestGray: #dadada;
+		--c-lightGray: #696969;
+		--c-darkGray: #545454;
+		--c-darkerGray: #444444;
+		--c-darkestGray: #272822;
+
+		--c-language: var(--c-darkGray);
+		--c-notLanguage: var(--c-brightWhite);
+		--c-comment: var(--c-lightGray);
+		--c-punctuation: var(--c-darkGray);
+		--c-property: var(--c-cerulean);
+		--c-boolean: var(--c-green);
+		--c-selector: var(--c-brown);
+		--c-operator: var(--c-green);
+		--c-atrule: var(--c-brown);
+		--c-keyword: var(--c-red);
+		--c-regex: var(--c-red);
+		--c-highlight: var(--c-lightBrown);
+		--c-lignNumber: var(--c-brown);
+		--c-lignNumberRows: var(--c-lightGray);
+
+		--c-background: var(--c-brightestWhite);
+		--c-inverseBackground: var(--c-darkestGray);
+		--c-primaryText: var(--c-darkestGray);
+		--c-secondaryText: var(--c-darkerGray);
+		--c-tertiaryText: var(--c-lightestGray);
+		--c-inverseText: var(--c-brightestWhite);
+		--c-primaryAccent: #ffc6ab;
+		--c-lightAccent: (rgba(255, 198, 171, 0.75));
+	}
+}
+
+/* todo: Finalize dark color scheme  */
 @media (prefers-color-scheme: dark) {
 	:root {
 		--c-background: var(--c-black);
@@ -69,6 +117,21 @@ h6 {
 		--c-inverseText: var(--c-black);
 		--c-primaryAccent: var(--c-blue);
 		--c-lightAccent: (rgba(255, 198, 171, 0.75));
+
+		--c-language: #f8f8f2;
+		--c-notLanguage: #2b2b2b;
+		--c-comment: #d4d0ab;
+		--c-punctuation: #fefefe;
+		--c-property: #ffa07a;
+		--c-boolean: #00e0e0;
+		--c-selector: #abe338;
+		--c-operator: #00e0e0;
+		--c-atrule: #ffd700;
+		--c-keyword: #00e0e0;
+		--c-regex: #ffd700;
+		--c-highlight: rgba(255, 217, 0, 0.1);
+		--c-lignNumber: #f8f8f2;
+		--c-lignNumberRows: #d4d0ab;
 	}
 }
 
@@ -118,7 +181,7 @@ a:active {
 }
 
 a:hover {
-	background-color: var(--c-lightAccent);
+	background-color: var(--c-primaryAccent);
 }
 
 p,
@@ -151,7 +214,7 @@ code {
 
 h1 {
 	font-size: 2.5rem;
-	color: var(--c-white);
+	color: var(--c-primaryText);
 }
 
 h2 {
@@ -239,4 +302,191 @@ iframe + p {
 
 .u-center {
 	text-align: center;
+}
+
+/**
+ * a11y-light theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
+ */
+
+/*
+ Theme
+ */
+code[class*='language-'],
+pre[class*='language-'] {
+	color: var(--c-language);
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+	padding: 1em;
+	margin: 0.5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+	background: var(--notLanguage);
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+	padding: 0.1em;
+	border-radius: 0.3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--c-comment);
+}
+
+.token.punctuation {
+	color: var(--c-punctuation);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.property {
+	color: var(--c-property);
+}
+
+.token.boolean,
+.token.number {
+	color: var(--c-boolean);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: var(--c-selector);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: var(--c-operator);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+	color: var(--c-atrule);
+}
+
+.token.keyword {
+	color: var(--c-keyword);
+}
+
+.token.regex,
+.token.regex {
+	color: var(--c-regex);
+}
+
+.token.regex,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*
+  Plugin support
+ */
+
+/* Line highlight */
+.line-highlight {
+	background: rgba(183, 134, 11, 0.075);
+	border-top: 1px solid var(--c-highlight);
+	border-bottom: 1px solid var(--c-highlight);
+}
+
+/* Line numbers */
+.line-numbers .line-numbers-rows {
+	border-right: 1px solid var(--c-lineNumber);
+}
+
+.line-numbers-rows > span:before {
+	color: var(--c-lineNumberRows);
+}
+
+/*
+ High contrast mode support
+*/
+@media screen and (-ms-high-contrast: active) {
+	code[class*='language-'],
+	pre[class*='language-'] {
+		color: windowText;
+		background: window;
+	}
+
+	:not(pre) > code[class*='language-'],
+	pre[class*='language-'] {
+		background: window;
+	}
+
+	.token.regex {
+		background: highlight;
+		color: window;
+		font-weight: normal;
+	}
+
+	.token.atrule,
+	.token.attr-value,
+	.token.function,
+	.token.keyword,
+	.token.operator,
+	.token.selector {
+		font-weight: bold;
+	}
+
+	.token.attr-value,
+	.token.comment,
+	.token.doctype,
+	.token.function,
+	.token.keyword,
+	.token.operator,
+	.token.property,
+	.token.string {
+		color: highlight;
+	}
+
+	.token.attr-value,
+	.token.url {
+		font-weight: normal;
+	}
 }
