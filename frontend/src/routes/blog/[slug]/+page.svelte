@@ -5,6 +5,7 @@
 	import type { PageData } from './$types';
 	import CustomDefaultListItem from '$components/CustomDefaultListItem.svelte';
 	import Code from '$components/Code.svelte';
+	import ImageBlock from '$components/ImageBlock.svelte'
 
 	export let data: PageData;
 	$$restProps
@@ -35,7 +36,9 @@
 				types: {
       	// block-level components
       		code: Code,
+					image: ImageBlock,
     		},
+
 		}} />
 		</div>
 	</div>
