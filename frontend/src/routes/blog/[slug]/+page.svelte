@@ -9,7 +9,6 @@
 
 	export let data: PageData;
 	$$restProps
-
 </script>
 
 
