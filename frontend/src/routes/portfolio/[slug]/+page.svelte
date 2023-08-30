@@ -42,15 +42,27 @@
 </main>
 
 <style>
-
- .article {
-	max-width: 70ch;
+.article {
 	margin: 1.5rem auto;
+	display: grid;
+	grid-template-columns: 1fr 70ch 1fr;
  }
 
  @media (min-width: 43.75rem) {
-	.article {margin-top: 3rem;}
+	.article {
+		margin-top: 3rem;
+	}
  }
+
+ /* TODO: Refactor more elegantly */
+ :global(.article :not(figure)) {
+	grid-column: 2/2;
+ }
+
+ :global(figure), .article img {
+		grid-column: 1/-1;
+		max-width: 100%;
+	}
 
 	.article__cover {
 		margin-top: 3rem;
@@ -90,4 +102,5 @@
 	:global(figure) {
 		margin: 2.5rem 0;
 	}
+ 
 </style>
