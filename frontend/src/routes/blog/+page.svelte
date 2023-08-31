@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
-	import { urlFor } from '$lib/utils/image';
 	import type { PageData } from './$types';
 	import classNames from 'classnames';
-	export let data: PageData
+	export let data: any
 	const {posts} = data
 
 	$$restProps
