@@ -71,6 +71,7 @@
  :global(figure), .article img {
 		grid-column: 1/-1;
 		max-width: 100%;
+		justify-self: center;
 	}
 
 	.article__cover {
