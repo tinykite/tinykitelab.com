@@ -63,8 +63,8 @@
 	}
  }
 
- /* TODO: Refactor more elegantly */
- :global(.article :not(figure)) {
+  /* TODO: Refactor more elegantly */
+	:global(.article :not(figure)) {
 	grid-column: 2/2;
  }
 
@@ -72,6 +72,10 @@
 		grid-column: 1/-1;
 		max-width: 100%;
 		justify-self: center;
+	}
+
+	:global(figure) {
+		margin: 2.5rem 0;
 	}
 
 	.article__cover {
@@ -111,10 +115,6 @@
 		font-size: 1.5rem;
 		margin-top: 1rem;
 		text-align: center;
-	}
-
-	:global(figure) {
-		margin: 2.5rem 0;
 	}
 
 	.article__date {
