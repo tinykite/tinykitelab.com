@@ -3,7 +3,6 @@
 	<a href="https://github.com/tinykite/tinykitelab.com">GitHub</a> or
 	<a class="email" href="mailto:dakota@tinykitelab.com">Say Hello</a> | Find
 	me on
-	<a rel="me" href="https://hachyderm.io/@tinykitelab">Mastodon</a> and
 	<a href="https://www.instagram.com/tinykitelab/">Instagram</a>
 </footer>
 
