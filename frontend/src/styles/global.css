@@ -213,7 +213,6 @@ code {
 }
 
 h1 {
-	font-size: 2.5rem;
 	color: var(--c-primaryText);
 }
 
@@ -293,15 +292,6 @@ iframe + p {
 	height: 1px;
 	overflow: hidden;
 	white-space: nowrap;
-}
-
-.u-half {
-	width: 50%;
-	margin: 0 auto;
-}
-
-.u-center {
-	text-align: center;
 }
 
 /**
