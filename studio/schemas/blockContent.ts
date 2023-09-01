@@ -66,6 +66,7 @@ export default defineType({
           name: 'alt',
           type: 'string',
           title: 'Alt Text',
+          validation: (Rule) => Rule.required().error('Alt text is required'),
         },
       ],
       options: {hotspot: true},
