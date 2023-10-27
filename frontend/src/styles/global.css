@@ -147,6 +147,7 @@ h6 {
 		url('/fonts/Canela-Regular-Web.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -155,6 +156,7 @@ h6 {
 		url('/fonts/CanelaDeck-Regular-Web.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -163,6 +165,7 @@ h6 {
 		url('/fonts/CanelaDeck-Light-Web.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 
 body {
