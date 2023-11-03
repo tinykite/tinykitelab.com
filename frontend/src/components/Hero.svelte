@@ -1,7 +1,6 @@
 <div class="hero">
 	<img
 		class="hero__image"
-		loading="lazy"
 		src="/images/dakotasexton-headshot.webp"
 		alt="Headshot of Dakota Sexton, wearing glasses, a black beanie, and a blue button-up shirt covered in flamingoes"
 		width="275"
