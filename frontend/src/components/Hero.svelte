@@ -37,7 +37,7 @@
 	  font-size: 3rem;
 	  line-height: 1.125;
 	  margin: 1.5rem 0 0;
-	  font-family: "Canela Web";
+	  font-family: var(--f-headings);
 	  font-weight: 400;
 	  font-style: normal;
 	}
