@@ -3,6 +3,8 @@
 		class="hero__image"
 		src="/images/dakotasexton-headshot.jpg"
 		alt="Headshot of Dakota Sexton, wearing glasses, a black beanie, and a blue button-up shirt covered in flamingoes"
+		width="275"
+		height="275"
 	/>
 	<div>
 		<h1 class="hero__title">Hi, I'm Dakota</h1>
