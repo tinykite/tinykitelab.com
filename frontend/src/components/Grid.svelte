@@ -15,7 +15,7 @@
 					<img
 						class="grid__image"
 						loading="lazy"
-						src={urlFor(caseStudy.mainImage).width(600).height(400).fit('min').url()}
+						src={urlFor(caseStudy.mainImage).width(600).height(400).fit('min').auto('format').url()}
 						alt="Cover image for {caseStudy.title}"
 						width="600"
 						height="400"
