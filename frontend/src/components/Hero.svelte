@@ -69,7 +69,7 @@
 
 	.hero__eyebrow {
 		line-height: 1.25;
-		font-family: 'Canela Deck Web';
+		font-family: var(--f-subheadings);
 		font-weight: 300;
 		font-style: normal;
 		margin-top: 0.5rem;

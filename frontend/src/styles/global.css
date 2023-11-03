@@ -61,6 +61,7 @@ h6 {
 	--c-darkestGray: #272822;
 
 	--f-headings: 'Canela Web', 'Adjusted Georgia Fallback';
+	--f-subheadings: 'Canela Deck Web', 'Adjusted Baskerville Fallback';
 }
 
 @media (prefers-color-scheme: light) {
@@ -152,6 +153,15 @@ h6 {
 }
 
 @font-face {
+	font-family: 'Adjusted Baskerville Fallback';
+	src: local(Baskerville);
+	size-adjust: 106%;
+	ascent-override: normal;
+	descent-override: 29%;
+	line-gap-override: normal;
+}
+
+@font-face {
 	font-family: 'Canela Web';
 	src: url('/fonts/Canela-Regular-Web.woff2') format('woff2'),
 		url('/fonts/Canela-Regular-Web.woff') format('woff');
@@ -218,7 +228,7 @@ nav,
 h1,
 h2,
 h3 {
-	font-family: 'Canela Deck Web', serif;
+	font-family: var(--f-subheadings);
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;

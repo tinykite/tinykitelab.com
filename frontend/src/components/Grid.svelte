@@ -89,7 +89,7 @@
 	.grid__title {
 		display: block;
 		font-size: 1.5rem;
-		font-family: 'Canela Deck Web', serif;
+		font-family: var(--f-subheadings);
 		font-weight: 400;
 		font-style: normal;
 		font-stretch: normal;
