@@ -302,6 +302,8 @@ img {
 }
 
 blockquote {
+	max-width: 55ch;
+	margin-inline: auto;
 	position: relative;
 
 	&:before {
