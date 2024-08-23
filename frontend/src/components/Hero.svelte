@@ -16,12 +16,6 @@
 			I love building interactive tools, design systems, and data visualizations — and advocating
 			for those products to center accessibility and inclusive design principles.
 		</p>
-		<p>
-			Before focusing on all that, I went to school for creative writing — and honed my skills as a
-			journalist and essayist for magazines that include <em>Yoga International</em>,
-			<em>Paper Darts</em>, <em>American Craft</em>, and <em>Monkeybicycle</em> plus the anthology
-			<em>The Way We Sleep</em>.
-		</p>
 	</div>
 </div>
 
