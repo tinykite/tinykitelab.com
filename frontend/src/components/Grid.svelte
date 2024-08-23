@@ -4,7 +4,7 @@
 	export let caseStudies: CaseStudy[];
 </script>
 
-<h2 class="grid__group-name">Creative Work</h2>
+<h2 class="grid__group-name">Case Studies</h2>
 
 <ul class="grid">
 	{#each caseStudies as caseStudy}
