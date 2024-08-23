@@ -13,7 +13,6 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	background: yellow;
 }
 img,
 picture,
@@ -62,6 +61,8 @@ h6 {
 
 	--f-headings: 'Canela Web', 'Adjusted Georgia Fallback';
 	--f-subheadings: 'Canela Deck Web', 'Adjusted Baskerville Fallback';
+
+	--c-foregroundAccent: var(--c-cerulean);
 }
 
 @media (prefers-color-scheme: light) {
@@ -298,6 +299,24 @@ body {
 img {
 	max-width: 100%;
 	display: block;
+}
+
+blockquote {
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -20px;
+		width: 5px;
+		height: 100%;
+		background: var(--c-foregroundAccent);
+	}
+}
+
+blockquote, blockquote + p {
+	margin-block-start: 2rem;
 }
 
 pre {
