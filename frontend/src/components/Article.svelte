@@ -49,7 +49,15 @@
 				}
 			}}
 		/>
-		<a href="/" class="article__button">Return</a>
+
+		{ #if articleType === 'caseStudy'}
+			<a href={data.url} class="article__button">Visit Site</a>
+
+			<p><a href="/">Return Home</a></p>
+		{ :else}
+			<a href="/blog" class="article__button">Return</a>
+		{/if}
+	
 	</article>
 </main>
 
@@ -103,7 +111,7 @@
 		outline: none;
 		max-width: max-content;
 		padding: 1rem 3rem;
-		margin-top: 3rem;
+		margin-top: 2rem;
 		text-decoration: none;
 		font-size: 1.25rem;
 	}
