@@ -15,6 +15,8 @@
 			<li>Accessibility Consulting</li>
 		</ul>
 
+		<h2>Technologies I use</h2>
+			<p> I love to get nerdy about CSS, HTML, and JavaScript. I've mentored many engineers in these languages plus a broad range of additional JavaScript-oriented technologies — including Svelte, React/Next.js, Vue, web components, and d3.js.</p>
 
 		<h2>Who I love working with</h2>
 		<p>I love collaborating with organizations with an interest in:</p>
@@ -27,6 +29,7 @@
 
 		<h2>Past collaborators</h2>
 		<ul>
+			<li>Postlight</li>
 			<li>Axios</li>
 			<li>The Library Innovation Lab at Harvard Law School</li>
 			<li>White House Custom Colour / ProDPI</li>
