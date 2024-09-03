@@ -15,7 +15,17 @@
 			<li>Accessibility Consulting</li>
 		</ul>
 
-		<h2>Organizations I've collaborated with</h2>
+
+		<h2>Who I love working with</h2>
+		<p>I love collaborating with organizations with an interest in:</p>
+		<ul>
+			<li>Social impact and public awareness</li>
+			<li>Creative technology</li>
+			<li>Software development that centers inclusive design</li>
+			<li>Data-driven or multidisciplinary storytelling</li>
+		</ul>
+
+		<h2>Past collaborators</h2>
 		<ul>
 			<li>Axios</li>
 			<li>The Library Innovation Lab at Harvard Law School</li>
