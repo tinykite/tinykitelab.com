@@ -5,7 +5,7 @@
 <div class="hero" class:hero--abbreviated={page === 'home'}>
 	<img
 		class="hero__image"
-		src="/images/dakotasexton-headshot.png"
+		src="/images/dakotasexton-headshot.webp"
 		alt="Headshot of Dakota Sexton, wearing glasses, a black beanie, and a blue button-up shirt covered in flamingoes"
 		width="275"
 		height="275"
