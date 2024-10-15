@@ -48,8 +48,10 @@ h6 {
 	--c-brightestWhite: #ffffff;
 	--c-offWhite: rgb(176, 176, 188);
 	--c-black: #161619;
+	--c-peach: #ffc6ab;
 	--c-brown: #aa5d00;
 	--c-lightBrown: #b8860b;
+	--c-lightestBrown: rgba(255, 198, 171, 0.75);
 	--c-green: #008000;
 	--c-cerulean: #007299;
 	--c-red: #d91e18;
@@ -63,51 +65,30 @@ h6 {
 	--f-subheadings: 'Canela Deck Web', 'Adjusted Baskerville Fallback';
 
 	--c-foregroundAccent: var(--c-cerulean);
-}
 
-@media (prefers-color-scheme: light) {
-	:root {
-		--c-blue: rgb(0, 0, 255);
-		--c-white: rgb(231, 231, 241);
-		--c-brightWhite: #fefefe;
-		--c-brightestWhite: #ffffff;
-		--c-offWhite: rgb(176, 176, 188);
-		--c-black: #161619;
-		--c-brown: #aa5d00;
-		--c-lightBrown: #b8860b;
-		--c-green: #008000;
-		--c-cerulean: #007299;
-		--c-red: #d91e18;
-		--c-lightestGray: #dadada;
-		--c-lightGray: #696969;
-		--c-darkGray: #545454;
-		--c-darkerGray: #444444;
-		--c-darkestGray: #272822;
+	--c-language: var(--c-darkGray);
+	--c-notLanguage: var(--c-brightWhite);
+	--c-comment: var(--c-lightGray);
+	--c-punctuation: var(--c-darkGray);
+	--c-property: var(--c-cerulean);
+	--c-boolean: var(--c-green);
+	--c-selector: var(--c-brown);
+	--c-operator: var(--c-green);
+	--c-atrule: var(--c-brown);
+	--c-keyword: var(--c-red);
+	--c-regex: var(--c-red);
+	--c-highlight: var(--c-lightBrown);
+	--c-lignNumber: var(--c-brown);
+	--c-lignNumberRows: var(--c-lightGray);
 
-		--c-language: var(--c-darkGray);
-		--c-notLanguage: var(--c-brightWhite);
-		--c-comment: var(--c-lightGray);
-		--c-punctuation: var(--c-darkGray);
-		--c-property: var(--c-cerulean);
-		--c-boolean: var(--c-green);
-		--c-selector: var(--c-brown);
-		--c-operator: var(--c-green);
-		--c-atrule: var(--c-brown);
-		--c-keyword: var(--c-red);
-		--c-regex: var(--c-red);
-		--c-highlight: var(--c-lightBrown);
-		--c-lignNumber: var(--c-brown);
-		--c-lignNumberRows: var(--c-lightGray);
-
-		--c-background: var(--c-brightestWhite);
-		--c-inverseBackground: var(--c-darkestGray);
-		--c-primaryText: var(--c-darkestGray);
-		--c-secondaryText: var(--c-darkerGray);
-		--c-tertiaryText: var(--c-lightestGray);
-		--c-inverseText: var(--c-brightestWhite);
-		--c-primaryAccent: #ffc6ab;
-		--c-lightAccent: (rgba(255, 198, 171, 0.75));
-	}
+	--c-background: var(--c-brightestWhite);
+	--c-inverseBackground: var(--c-darkestGray);
+	--c-primaryText: var(--c-darkestGray);
+	--c-secondaryText: var(--c-darkerGray);
+	--c-tertiaryText: var(--c-lightestGray);
+	--c-inverseText: var(--c-brightestWhite);
+	--c-primaryAccent: var(--c-peach);
+	--c-lightAccent: var(--c-lightestBrown);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -119,7 +100,7 @@ h6 {
 		--c-tertiaryText: var(--c-white);
 		--c-inverseText: var(--c-black);
 		--c-primaryAccent: var(--c-blue);
-		--c-lightAccent: (rgba(255, 198, 171, 0.75));
+		--c-lightAccent: var(--c-lightestBrown);
 
 		--c-language: #f8f8f2;
 		--c-notLanguage: #2b2b2b;
