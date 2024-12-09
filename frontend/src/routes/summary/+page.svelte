@@ -117,7 +117,7 @@ interactive animation, and well-researched, expert advice.`
 			</p>
 
 			<p>
-				Below you'll find some of my favorite examples of visual storytelling, creative writing, and
+				Below you'll find some of my favorite work in visual storytelling, creative writing, and
 				journalism.
 			</p>
 
