@@ -42,7 +42,7 @@
 			image:
 				'https://cdn.sanity.io/images/47qkwxva/production/77dc175ec42d4c3312402a40df36b154bd2c98aa-1500x1000.png',
 			description: `A personal project that explores the world of pourover coffee through irrevent humor, 
-interactive animation, and well-researched, expert advice from Counter Culture and Cafe Imports.`
+interactive animation, and well-researched, expert advice.`
 		},
 		{
 			title: 'Moon Watching',
@@ -52,7 +52,7 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 				'https://cdn.sanity.io/images/47qkwxva/production/9829c05b99dd857afdebbb4eecd962c833d8eb77-1500x1000.jpg',
 			responsibilities: 'Writing, Design, Web Development',
 			description:
-				'A Postlight Labs project that experimented with how to foster curiosity about the moon through a series of participatory activities, including moon alert newsletters and an animated lunar phase explorer.'
+				'An interactive project for Postlight Labs that provides playful data visualization tools for lunar exploration.'
 		},
 		{
 			title: 'A Modern Eden',
@@ -61,8 +61,7 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 			image:
 				'https://cdn.sanity.io/images/47qkwxva/production/49f0fba7325f94a59c047237b6affd317e4392d1-1500x1000.png',
 			responsibilities: 'Writing, Design, Web Development',
-			description:
-				'A Sparkbox project that experimented with how to foster curiosity about the moon through a series of participatory activities, including moon alert newsletters and an animated lunar phase explorer.'
+			description: `A marketing website, produced in collaboration with Sparkbox, that promoted artful products for "style-savvy parents who care about what goes into their kids' rooms."`
 		},
 		{
 			title: 'Amoratorium',
@@ -71,17 +70,17 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 				'https://cdn.sanity.io/images/47qkwxva/production/c94ec1e70d2ac8002c4a707a6a34958ea6680913-900x600.jpg',
 			responsibilities: 'Writing, Design, Web Development',
 			description:
-				'A Paper Darts project experimented with how to foster curiosity about the moon through a series of participatory activities, including moon alert newsletters and an animated lunar phase explorer.'
-		},
-		{
-			title: 'Minimal Botany',
-			url: 'https://moonwatching.fyi/',
-			image:
-				'https://cdn.sanity.io/images/47qkwxva/production/7c6c5ebf147f08cd8c6f817133c8beea2dee2d95-1500x1000.png',
-			responsibilities: 'Writing, Design, Web Development',
-			description:
-				'Moon Watching is a Postlight Labs project that experimented with how to foster curiosity about the moon through a series of participatory activities, including moon alert newsletters and an animated lunar phase explorer.'
+				'An artful coffee table book, produced in collaboration with Paper Darts, that blurred the lines between songwriting, art, and poetry.'
 		}
+		// {
+		// 	title: 'Minimal Botany',
+		// 	url: 'https://moonwatching.fyi/',
+		// 	image:
+		// 		'https://cdn.sanity.io/images/47qkwxva/production/7c6c5ebf147f08cd8c6f817133c8beea2dee2d95-1500x1000.png',
+		// 	responsibilities: 'Writing, Design, Web Development',
+		// 	description:
+		// 		'Moon Watching is a Postlight Labs project that experimented with how to foster curiosity about the moon through a series of participatory activities, including moon alert newsletters and an animated lunar phase explorer.'
+		// }
 	];
 </script>
 
@@ -111,10 +110,10 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 				and an animated website about making pourover coffee.
 			</p>
 			<p>
-				In the process, I've discovered I love imagining creative ways to spark cultural
-				conversations. I'm also passionate about finding ways to use creative ideas to help others
-				feel welcome — I think creative storytelling is often a cataylst for positive impact, and
-				that it can help everyone feel welcome to learn and engage with a particular topic.
+				In the process, I've discovered one of the things that I love most is imagining creative
+				ways to spark cultural conversations. I'm also passionate about exploring creative work as a
+				catalyst for social good — and thinking about how visual storytelling and experience design
+				can help others feel seen, inspired, and welcome to belong.
 			</p>
 
 			<p>
