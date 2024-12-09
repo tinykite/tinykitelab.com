@@ -132,9 +132,9 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 						</h3>
 						<p class="supplemental__subheading">
 							{#if visualSample.url}
-								<a href={visualSample.url}>Visit Website</a>
+								<a class="supplemental__link" href={visualSample.url}>Visit Website</a> |
 							{/if}
-							<a href={visualSample.caseStudy}>Read Case Study</a>
+							<a class="supplemental__link" href={visualSample.caseStudy}>Read Case Study</a>
 						</p>
 
 						<img class="supplemental__image" src={visualSample.image} alt="" />
