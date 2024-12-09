@@ -274,13 +274,21 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 	}
 
 	.supplemental__list-item {
-		border-top: 0.5px solid var(--c-whiteDimmed);
+		border-top: 0.5px solid var(--c-tertiaryText);
 		padding: 2rem 0;
 		margin: 0;
+
+		@media (prefers-color-scheme: dark) {
+			border-top-color: rgba(231, 231, 241, 0.3);
+		}
 	}
 
 	.supplemental__list-item:last-of-type {
-		border-bottom: 0.5px solid var(--c-whiteDimmed);
+		border-bottom: 0.5px solid var(--c-tertiaryText);
+
+		@media (prefers-color-scheme: dark) {
+			border-bottom-color: rgba(231, 231, 241, 0.3);
+		}
 	}
 
 	.supplemental__list-item--compact,
