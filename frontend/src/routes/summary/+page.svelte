@@ -37,15 +37,17 @@
 		{
 			title: 'Ultra Basic Coffee',
 			url: 'https://ultrabasic.coffee/',
+			caseStudy: '/portfolio/ultra-basic-coffee/',
 			responsibilities: 'Writing, Design, Web Development',
 			image:
 				'https://cdn.sanity.io/images/47qkwxva/production/77dc175ec42d4c3312402a40df36b154bd2c98aa-1500x1000.png',
-			description: `A personal project that explored the world of pourover coffee through irrevent humor, 
+			description: `A personal project that explores the world of pourover coffee through irrevent humor, 
 interactive animation, and well-researched, expert advice from Counter Culture and Cafe Imports.`
 		},
 		{
 			title: 'Moon Watching',
 			url: 'https://moonwatching.fyi/',
+			caseStudy: '/portfolio/moon-watching/',
 			image:
 				'https://cdn.sanity.io/images/47qkwxva/production/9829c05b99dd857afdebbb4eecd962c833d8eb77-1500x1000.jpg',
 			responsibilities: 'Writing, Design, Web Development',
@@ -54,7 +56,8 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 		},
 		{
 			title: 'A Modern Eden',
-			url: 'https://moonwatching.fyi/',
+			url: 'https://amoderneden.netlify.app/',
+			caseStudy: 'portfolio/a-modern-eden/',
 			image:
 				'https://cdn.sanity.io/images/47qkwxva/production/49f0fba7325f94a59c047237b6affd317e4392d1-1500x1000.png',
 			responsibilities: 'Writing, Design, Web Development',
@@ -63,7 +66,7 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 		},
 		{
 			title: 'Amoratorium',
-			url: 'https://moonwatching.fyi/',
+			caseStudy: '/portfolio/amoratorium',
 			image:
 				'https://cdn.sanity.io/images/47qkwxva/production/c94ec1e70d2ac8002c4a707a6a34958ea6680913-900x600.jpg',
 			responsibilities: 'Writing, Design, Web Development',
@@ -94,23 +97,29 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 		<div>
 			<h1 class="hero__title">Hi, I'm Dakota</h1>
 			<p class="hero__eyebrow">
-				I'm a developer and designer passionate about creating inclusive design systems, data
-				visualizations, and interactive tools.
+				I'm a storyteller turned multidisciplinary creative with experience in journalism, visual
+				design, and creative technology.
+			</p>
+			<p>
+				I originally went to art school for a BFA in fiction writing before pursuing a career in
+				magazine journalism. My writing has appeared in award-winning magazines (<em>Paper Darts</em
+				>, <em>American Craft</em>,
+				<em>Yoga International</em>
+				and
+				<em>Monkeybicycle</em>) and the anthology <em>The Way We Sleep</em>. It has also appeared in
+				a variety of other, less-traditional mediums — including plant-themed Letterpress coasters
+				and an animated website about making pourover coffee.
+			</p>
+			<p>
+				In the process, I've discovered I love imagining creative ways to spark cultural
+				conversations. I'm also passionate about finding ways to use creative ideas to help others
+				feel welcome — I think creative storytelling is often a cataylst for positive impact, and
+				that it can help everyone feel welcome to learn and engage with a particular topic.
 			</p>
 
 			<p>
-				I'm also a skilled storyteller. Before pursuing a career focused on technology, I was an art
-				school student studying creative writing. My writing has appeared in award-winning magazines
-				(<em>Paper Darts</em>, <em>American Craft</em>, <em>Yoga International</em> and
-				<em>Monkeybicycle</em>) and anthologized in <em>The Way We Sleep</em>. I've additionally
-				launched independent storytelling projects that include
-				<a href="https://ultrabasic.coffee/">Ultra Basic Coffee</a> and
-				<a href="https://ephemeralatlas.com/">Ephemeral Atlas.</a>
-			</p>
-			<p>
-				I love using my multidisciplinary skills to help cross-disciplinary teams creatively
-				strategize how to best serve their users — and to together create meaningful stories and
-				experiences that anyone can appreciate.
+				Below you'll find some of my favorite examples of visual storytelling, creative writing, and
+				journalism.
 			</p>
 
 			<h2 class="supplemental__sectionTitle">Visual Storytelling</h2>
@@ -121,7 +130,12 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 						<h3 class="supplemental__heading">
 							{visualSample.title}
 						</h3>
-						<p class="supplemental__subheading">Vist Website | Read Case Study</p>
+						<p class="supplemental__subheading">
+							{#if visualSample.url}
+								<a href={visualSample.url}>Visit Website</a>
+							{/if}
+							<a href={visualSample.caseStudy}>Read Case Study</a>
+						</p>
 
 						<img class="supplemental__image" src={visualSample.image} alt="" />
 
@@ -260,10 +274,13 @@ interactive animation, and well-researched, expert advice from Counter Culture a
 	}
 
 	.supplemental__list-item {
-		border-top: 1px solid var(--c-tertiaryText);
-		border-bottom: 1px solid var(--c-tertiaryText);
+		border-top: 0.5px solid var(--c-whiteDimmed);
 		padding: 2rem 0;
 		margin: 0;
+	}
+
+	.supplemental__list-item:last-of-type {
+		border-bottom: 0.5px solid var(--c-whiteDimmed);
 	}
 
 	.supplemental__list-item--compact,
