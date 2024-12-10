@@ -20,7 +20,7 @@
 		},
 		{
 			title: `Defending Folk and Country with Radio K's Mountain Connection`,
-			url: 'https://www.curbsidesplendor.com/books/the-way-we-sleep',
+			url: 'https://tinykitelab.com/blog/interview-defending-folk-and-country-with-radio-k-s-mountain-connection',
 			type: 'Interview',
 			publication: 'Paper Darts'
 		},
