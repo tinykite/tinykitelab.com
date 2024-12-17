@@ -17,7 +17,7 @@
 	<article class="article">
 		{#if articleType === 'blog'}
 			<p class="article__date">
-				{formatDate(data._createdAt)}
+				{formatDate(data._publishedAt)}
 			</p>
 		{/if}
 		<h1 class={titleClasses}>{data.title}</h1>
@@ -50,14 +50,13 @@
 			}}
 		/>
 
-		{ #if articleType === 'caseStudy'}
+		{#if articleType === 'caseStudy'}
 			<a href={data.url} class="article__button">Visit Site</a>
 
 			<p><a href="/">Return Home</a></p>
-		{ :else}
+		{:else}
 			<a href="/blog" class="article__button">Return</a>
 		{/if}
-	
 	</article>
 </main>
 
