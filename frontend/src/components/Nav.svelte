@@ -3,8 +3,6 @@
 	import { page } from '$app/state';
 
   const isCurrentPage = (url: string) => {
-    console.log(url)
-    console.log(page.url.pathname)
     if (url === '/blog' && page.url.pathname.includes('/blog'))
     { return 'page' }
 
