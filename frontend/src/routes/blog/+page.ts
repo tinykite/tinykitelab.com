@@ -6,7 +6,7 @@ export const load = (async () => {
 	const posts = await getPosts();
 
 	if (!posts) {
-		throw error(404, 'No posts found');
+		error(404, 'No posts found');
 	}
 
 	return {

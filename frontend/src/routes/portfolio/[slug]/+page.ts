@@ -8,5 +8,5 @@ export const load = (async ({ params }) => {
 	const caseStudy = await getCaseStudy(params.slug);
 	if (caseStudy) return caseStudy;
 
-	throw error(404, 'Not found');
+	error(404, 'Not found');
 }) satisfies PageLoad;

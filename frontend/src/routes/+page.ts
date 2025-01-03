@@ -7,11 +7,11 @@ export const load = (async () => {
 	const caseStudies = await getCaseStudies();
 
 	if (!posts) {
-		throw error(404, 'No posts found');
+		error(404, 'No posts found');
 	}
 
 	if (!caseStudies) {
-		throw error(404, 'No case studies found');
+		error(404, 'No case studies found');
 	}
 
 	return {
