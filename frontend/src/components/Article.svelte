@@ -17,8 +17,10 @@
 	<article class="article">
 		{#if articleType === 'blog'}
 			<p class="article__date">
-				{formatDate(data._publishedAt)}
+				<time datetime={formatDate(data.publishedAt)}>{ formatDate(data.publishedAt) }</time>
 			</p>
+
+
 		{/if}
 		<h1 class={titleClasses}>{data.title}</h1>
 
