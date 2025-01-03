@@ -1,4 +1,4 @@
-export const navItems = [
+export const navItems: Array<NavItem> = [
 	{
 		text: 'Portfolio',
 		url: '/'
@@ -12,6 +12,11 @@ export const navItems = [
 		url: '/blog'
 	}
 ];
+
+export type NavItem = {
+	text: string,
+	url: string
+}
 
 export const talks = [
 	[

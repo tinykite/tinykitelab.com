@@ -1,13 +1,25 @@
 <script lang="ts">
 	import { navItems } from '$lib/consts';
 	import { page } from '$app/state';
-  import classNames from 'classnames';
+
+  const isCurrentPage = (url: string) => {
+    console.log(url)
+    console.log(page.url.pathname)
+    if (url === '/blog' && page.url.pathname.includes('/blog'))
+    { return 'page' }
+
+    if (page.url.pathname === url) {
+      return 'page'
+    }
+
+    return undefined
+  }
 
  </script>
 
 <header class="site-header">
 	<nav class="site-nav">
-		<a href="/" aria-current={page.url.pathname === '/' ? 'page' : undefined} class="site-nav__logo">
+		<a href="/" aria-current={isCurrentPage('/')} class="site-nav__logo">
       <span class="u-visually-hidden">Tiny Kite Lab</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154.67 183.93">
         <path d="m77.06,109.28c9.43,9.31,18.35,19.06,27.66,28.37l-1.48,2.49-25.83,43.67-.07.12-.07-.12-25.36-42.86-1.95-3.3c-.23-.55-.02-.88.41-1.31,4.9-4.92,9.81-9.82,14.69-14.76,3.95-4,7.85-8.05,12-12.3Z"/>
@@ -20,7 +32,7 @@
 				<a
         
 					class={'site-nav__nav-link'}
-          aria-current={page.url.pathname === navItem.url ? 'page' : undefined}
+          aria-current={isCurrentPage(navItem.url)}
 					href="{ navItem.url }">
 					{ navItem.text }</a
 				>
@@ -38,14 +50,14 @@
  }
 
 	.site-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  letter-spacing: 1px;
-  flex-direction: column;
-  width: 85%;
-  max-width: 65rem;
-  margin: 2rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1px;
+    flex-direction: column;
+    width: 85%;
+    max-width: 65rem;
+    margin: 2rem auto 0;
 
     @media (min-width: 50rem) {
       flex-direction: row;
