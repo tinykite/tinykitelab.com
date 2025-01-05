@@ -17,10 +17,8 @@
 	<article class="article">
 		{#if articleType === 'blog'}
 			<p class="article__date">
-				<time datetime={formatDate(data.publishedAt)}>{ formatDate(data.publishedAt) }</time>
+				<time datetime={formatDate(data.publishedAt)}>{formatDate(data.publishedAt)}</time>
 			</p>
-
-
 		{/if}
 		<h1 class={titleClasses}>{data.title}</h1>
 
@@ -53,84 +51,13 @@
 		/>
 
 		{#if articleType === 'caseStudy'}
-			<a href={data.url} class="article__button">Visit Site</a>
-
+			<a href={data.url} class="button">Visit Site</a>
 			<p><a href="/">Return Home</a></p>
 		{:else}
-			<a href="/blog" class="article__button">Return</a>
+			<a href="/blog" class="button">Return</a>
 		{/if}
 	</article>
 </main>
 
 <style>
-	.article {
-		margin: 1.5rem auto;
-		display: grid;
-		grid-template-columns: 1fr 75ch 1fr;
-	}
-
-	@media (min-width: 43.75rem) {
-		.article {
-			margin-top: 3rem;
-		}
-	}
-
-	/* TODO: Refactor more elegantly */
-	:global(.article :not(figure)) {
-		grid-column: 2/2;
-	}
-
-	:global(figure),
-	.article img {
-		grid-column: 1/-1;
-		max-width: 100%;
-		justify-self: center;
-	}
-
-	:global(figure) {
-		margin: 2.5rem 0;
-	}
-
-	.article__cover {
-		margin-top: 3rem;
-	}
-
-	.article__title {
-		font-size: 2.5rem;
-	}
-
-	.article__title--emphasis {
-		font-size: 4rem;
-		text-align: center;
-	}
-
-	.article__button {
-		display: block;
-		background: var(--c-inverseBackground);
-		color: var(--c-inverseText);
-		border: 2px solid var(--c-inverseText);
-		outline: none;
-		max-width: max-content;
-		padding: 1rem 3rem;
-		margin-top: 2rem;
-		text-decoration: none;
-		font-size: 1.25rem;
-	}
-
-	.article__button:hover {
-		background: var(--c-Background);
-		color: var(--c-primaryText);
-		border: 2px solid var(--c-primaryText);
-		outline: none;
-	}
-
-	.article__description {
-		font-size: 1.5rem;
-		margin-top: 1rem;
-		text-align: center;
-	}
-
-	.article__date {
-		font-family: 'Nimbus Mono PS', 'Courier New', monospace;
-	}
 </style>
