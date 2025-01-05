@@ -16,7 +16,11 @@
 		</ul>
 
 		<h2>Technologies I use</h2>
-			<p> I love to get nerdy about CSS, HTML, and JavaScript. I've mentored many engineers in these languages plus a broad range of additional JavaScript-oriented technologies — including Svelte, React/Next.js, Vue, web components, and d3.js.</p>
+		<p>
+			I love to get nerdy about CSS, HTML, and JavaScript. I've mentored many engineers in these
+			languages plus a broad range of additional JavaScript-oriented technologies — including
+			Svelte, React/Next.js, Vue, web components, and d3.js.
+		</p>
 
 		<h2>Who I love working with</h2>
 		<p>I love collaborating with organizations with an interest in:</p>
@@ -37,7 +41,7 @@
 		</ul>
 		<h2>Contact</h2>
 		<p>Are you interested in working together? Please feel free to reach out.</p>
-		<a href="mailto:dakota@tinykitelab.com" class="section__contactLink">Email me</a>
+		<a href="mailto:dakota@tinykitelab.com" class="button">Email me</a>
 	</div>
 </main>
 
@@ -52,25 +56,5 @@
 		.section {
 			margin-inline-start: calc(275px + 3.5rem);
 		}
-	}
-
-	.section__contactLink {
-		display: block;
-		background: var(--c-inverseBackground);
-		color: var(--c-inverseText);
-		border: 2px solid var(--c-inverseText);
-		outline: none;
-		max-width: max-content;
-		padding: 1rem 3rem;
-		margin-block-start: 1rem;
-		text-decoration: none;
-		font-size: 1.25rem;
-	}
-
-	.section__contactLink:hover {
-		background: var(--c-Background);
-		color: var(--c-primaryText);
-		border: 2px solid var(--c-primaryText);
-		outline: none;
 	}
 </style>
