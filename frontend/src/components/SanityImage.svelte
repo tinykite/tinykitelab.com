@@ -4,8 +4,7 @@
 	import { browser } from '$app/environment';
 
 	export let image;
-	export let maxWidth = 1200;
-	export let alt = undefined;
+	export let maxWidth = 1440;
 
 	// Example image document ID: image-cc93b69600f5cd1abce97fd0d4aa71793dbbba76-1350x900-png
 	// Structure: image-${storedImgId}-${dimensions}-${format}
@@ -25,14 +24,16 @@
 		imageRef.onload = () => {
 			loaded = true;
 		};
+
+		console.log(image);
 	});
 </script>
 
 {#if browser && image}
 	<img
 		loading="lazy"
-		src={urlFor(image).width(maxWidth).fit('fillmax').auto('format').url()}
-		alt={alt || image.alt || ''}
+		src={urlFor(image).width(maxWidth).fit('fillmax').auto('format').quality(100).url()}
+		alt={image.alt}
 		class:loaded
 		bind:this={imageRef}
 		style="aspect-ratio: {aspectRatio};"

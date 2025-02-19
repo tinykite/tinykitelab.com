@@ -5,6 +5,7 @@
 	import Code from '$components/Code.svelte';
 	import { urlFor } from '$lib/utils/image';
 	import { formatDate } from '$lib/utils';
+	import Vimeo from './Vimeo.svelte';
 	export let data: any;
 
 	type ArticleType = 'caseStudy' | 'blog';
@@ -45,7 +46,8 @@
 				types: {
 					// block-level components
 					code: Code,
-					image: ImageBlock
+					image: ImageBlock,
+					vimeo: Vimeo
 				}
 			}}
 		/>
