@@ -5,7 +5,7 @@
 	import Code from '$components/Code.svelte';
 	import { urlFor } from '$lib/utils/image';
 	import { formatDate } from '$lib/utils';
-	import Vimeo from './Vimeo.svelte';
+	import Vimeo from '$components/Vimeo.svelte';
 	export let data: any;
 
 	type ArticleType = 'caseStudy' | 'blog';

@@ -285,14 +285,6 @@
 	pre {
 		margin-top: 1rem;
 	}
-	
-	iframe {
-		margin: 1rem auto 0;
-	}
-	
-	iframe + p {
-		margin-top: 1rem;
-	}
 }
 
 .u-visually-hidden {
@@ -509,21 +501,28 @@ pre[class*='language-'] {
 	}
 }
 
-.article :not(figure) {
+.article *  {
 	@media (min-width: 50rem) {
 		grid-column: 2/2;
 	}
 }
 
 .article figure,
-.article img {
+.article img, .iframe{
 	grid-column: 1/-1;
 	max-width: 100%;
 	justify-self: center;
 }
 
-.article figure {
-	margin: 2.5rem 0;
+.iframe {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+  }
+
+.article figure, .iframe {
+	margin-block-start: 2.5rem;
+	margin-block-end: 1.125rem;
 }
 
 .article__cover {

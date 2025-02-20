@@ -3,44 +3,41 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
-	export let image;
-	export let maxWidth = 1440;
+	const { image } = $props();
 
 	// Example image document ID: image-cc93b69600f5cd1abce97fd0d4aa71793dbbba76-1350x900-png
 	// Structure: image-${storedImgId}-${dimensions}-${format}
+	let maxWidth = 1440;
 
 	// If we split it by "-", the 3rd element are the dimensions (1350x900)
-	$: dimensions = image?.asset?._ref?.split('-')[2];
+	let dimensions = $derived(image?.asset?._ref?.split('-')[2]);
 	// If we split dimensions by "x", we get the width (1350) and height (900)
-	$: [width, height] = dimensions.split('x').map(Number);
-
-	$: aspectRatio = width / height;
+	let [width, height] = $derived(dimensions?.split('x').map(Number) || [null, null]);
+	let [renderedWidth] = $derived(width < maxWidth ? width : maxWidth);
 
 	let imageRef;
 	// Once loaded, the image will transition to full opacity
-	let loaded = false;
+	let loaded = $state(false);
 
 	onMount(() => {
-		imageRef.onload = () => {
-			loaded = true;
-		};
-
-		console.log(image);
+		if (imageRef) {
+			imageRef.onload = () => {
+				loaded = true;
+			};
+		}
 	});
 </script>
 
 {#if browser && image}
 	<img
 		loading="lazy"
-		src={urlFor(image).width(maxWidth).fit('fillmax').auto('format').quality(100).url()}
+		src={urlFor(image).width(renderedWidth).quality(100).url()}
 		alt={image.alt}
 		class:loaded
 		bind:this={imageRef}
-		style="aspect-ratio: {aspectRatio};"
 	/>
 {/if}
 
-<!-- some optional effects to make image loading look nicer -->
 <style>
 	img {
 		opacity: 0;

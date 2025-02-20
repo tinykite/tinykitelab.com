@@ -8,12 +8,12 @@ export default defineType({
   icon: PlayIcon,
   fields: [
     defineField({
-      name: 'url',
-      type: 'url',
-      title: 'Vimeo video URL',
+      name: 'id',
+      type: 'string',
+      title: 'Vimeo video id',
     }),
   ],
   preview: {
-    select: {title: 'url'},
+    select: {title: 'id'},
   },
 })
