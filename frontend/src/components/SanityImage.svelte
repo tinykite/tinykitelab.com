@@ -18,7 +18,11 @@
 </script>
 
 {#if image}
-	<img loading="lazy" src={urlFor(image).width(renderedWidth).quality(100).url()} alt={image.alt} />
+	<img
+		loading="lazy"
+		src={urlFor(image).width(renderedWidth).quality(100).dpr(2).url()}
+		alt={image.alt}
+	/>
 {/if}
 
 <style>
