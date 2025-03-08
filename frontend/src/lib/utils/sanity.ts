@@ -17,7 +17,7 @@ export const client = createClient({
 
 export async function getCaseStudies(): Promise<CaseStudy[]> {
 	return await client.fetch(
-		groq`*[_type == "caseStudy" && defined(slug.current) && featured == true] | order(_createdAt desc)`
+		groq`*[_type == "caseStudy" && defined(slug.current) && featured == true] | order(displayOrder asc)`
 	);
 }
 
