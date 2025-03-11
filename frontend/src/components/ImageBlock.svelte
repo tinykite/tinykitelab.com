@@ -1,15 +1,22 @@
 <script lang="ts">
 	import SanityImage from './SanityImage.svelte';
 
-	export let portableText: any;
-	const { value } = portableText;
+	interface Props {
+		portableText: any;
+		gridImage: any;
+	}
+
+	let { portableText, gridImage }: Props = $props();
 </script>
 
-{#if value.asset}
-	<figure>
-		<SanityImage image={value} />
-		{#if value.caption}
-			<figcaption>{value.caption}</figcaption>
-		{/if}
+{#if portableText?.value}
+	<figure class="figure">
+		<SanityImage alt={portableText.value.alt} asset={portableText.value.asset} />
+	</figure>
+{/if}
+
+{#if gridImage}
+	<figure class="figure figure--gridItem">
+		<SanityImage alt={gridImage.alt} asset={gridImage.image.asset} type="grid" />
 	</figure>
 {/if}

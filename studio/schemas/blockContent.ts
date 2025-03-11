@@ -85,6 +85,9 @@ export default defineType({
       },
     }),
     defineArrayMember({
+      type: 'imageGrid'
+    }),
+    defineArrayMember({
       type: 'youtube'
     }),
     defineArrayMember({
